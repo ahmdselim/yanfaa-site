@@ -1,0 +1,827 @@
+/* Start our framework */
+@import url("https://fonts.googleapis.com/css2?family=Lemonada&family=Tajawal&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clear {
+  clear: both;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+/* Start Swiper */
+.swiper-container {
+  height: 370px;
+  padding-top: 10px;
+  position: unset !important;
+}
+.swiper-container .swiper-wrapper {
+  cursor: grab;
+}
+.swiper-container .swiper-wrapper .swiper-slide {
+  width: 388.25px !important;
+  height: 350px !important;
+}
+
+/* End Swiper */
+.activeSideBarLi {
+  display: flex !important;
+  flex-direction: column !important;
+  position: absolute;
+  top: 30%;
+}
+.activeSideBarLiLogin {
+  margin-left: 0 !important;
+  margin-bottom: 20px;
+  font-size: 20px !important;
+}
+.activeSideBarLiSubscribe {
+  margin-right: 0px !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-size: 20px !important;
+}
+.activeSideBarLiLogin:hover,
+.activeSideBarLiSubscribe:hover {
+  color: #222 !important;
+}
+.timesActive {
+  margin-top: 30px;
+  font-size: 30px !important;
+}
+.activeSideBarUl {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  z-index: 1;
+}
+
+/* End our framework */
+
+/* Start Home Style */
+
+/* Start style header component */
+.header {
+  background-color: #fff;
+}
+.header .row ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+.header .row ul li.times {
+  /* display: none; */
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 100;
+}
+.header .row ul li.bars {
+  display: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 100;
+}
+.header .row ul li .login {
+  font-family: "Tajawal", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  margin-left: 10px;
+}
+.header .row ul li .subscribe {
+  font-family: "Tajawal", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #dcdfe6;
+  border-radius: 50px;
+}
+.header .row ul li span {
+  font-size: 20px;
+  color: #5b6477;
+}
+.header .row ul li span.logo {
+  font-family: "Tajawal", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #3cc379;
+}
+.header .row ul li .subscribe:hover,
+.header .row ul li .login:hover {
+  color: #3cc379;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.header section.nav {
+  margin-top: 0px;
+  width: 100%;
+  height: 700px;
+  background-color: #fff;
+}
+.header section.nav .row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  /* flex-wrap: wrap; */
+}
+.header section.nav .row .left {
+  width: 50%;
+  margin-right: 5%;
+}
+.header section.nav .row .left img {
+  width: 75%;
+}
+
+.header section.nav .row .right {
+  width: 50%;
+  text-align: right;
+}
+.header section.nav .row .right h1 {
+  font-family: "Tajawal", sans-serif;
+  font-size: 40px;
+  color: #252541;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+.header section.nav .row .right p {
+  font-family: "Tajawal", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+button {
+  outline: none;
+}
+.header section.nav .row .right .buttons button.courses {
+  border: 1px solid #252541;
+  background-color: #252541;
+  color: #fff;
+  padding: 15px;
+  margin-left: 2px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-family: "Tajawal", sans-serif;
+}
+.header section.nav .row .right .buttons button.courses:hover {
+  border: 1px solid #262626;
+  background-color: #262626;
+  cursor: pointer;
+}
+
+.header section.nav .row .right .buttons button.logSub {
+  border: 1px solid #19b962;
+  background-color: #19b962;
+  color: #fff;
+  padding: 15px;
+  margin-left: 10px;
+  border-radius: 25px;
+  font-size: 15px;
+  font-family: "Tajawal", sans-serif;
+}
+.header section.nav .row .right .buttons button.logSub:hover {
+  border: 1px solid #3cc379;
+  background-color: #3cc379;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1200px) {
+  .header .row ul li.bars {
+    display: block;
+  }
+  .header .row ul li.log {
+    display: none;
+  }
+  .header section.nav .row .left img {
+    width: 100%;
+    padding-right: 5%;
+  }
+  .header section.nav .row {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 762px) {
+  .header section.nav {
+    height: 450px;
+  }
+  .header section.nav {
+    background-image: url("./images/Main/bgYanfaa.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    padding-top: 100px;
+  }
+  .header section.nav .row .left {
+    width: 0%;
+  }
+  .header section.nav .row .left img {
+    display: none;
+  }
+  .header section.nav .row .right {
+    width: 100%;
+  }
+  .header section.nav .row .right p {
+    font-family: "Tajawal", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #707374;
+    width: 70%;
+    text-align: right;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .header section.nav .row .right .buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .header section.nav .row .right .buttons button.courses {
+    max-width: 100%;
+    flex: 0 0 100%;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .header section.nav .row .right .buttons button.logSub {
+    max-width: 100%;
+    flex: 0 0 100%;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .header section.nav .row .right h1 {
+    width: 100%;
+    text-align: right;
+  }
+  .header section.nav .row .right p {
+    line-height: 1.4;
+    font-size: 15px;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+/* End style header component */
+/* Start style content component */
+.content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.content .row {
+  display: flex;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.content .row:nth-of-type(2) {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  max-width: 98%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.content .row .right {
+  max-width: 50%;
+}
+.content .row .right .arrowLeft {
+  margin-right: 50px;
+  color: #caadad;
+  font-size: 25px;
+  font-weight: 100;
+}
+.content .row .right .arrowRight {
+  margin-left: 50px;
+  color: #555;
+  font-size: 25px;
+  font-weight: 100;
+}
+.content .row .left {
+  max-width: 50%;
+}
+.content .row .left p {
+  font-size: 25px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+}
+.content .row .category {
+  text-align: right;
+  background-color: rgba(168, 114, 233, 0.2);
+  margin-right: 1%;
+  padding: 20px;
+  border-radius: 15px;
+  transform: translateY(8px);
+  transition: all 0.3s ease-in-out;
+  cursor: grab !important;
+  height: 350px;
+}
+.content .row .category:hover {
+  cursor: pointer;
+  transform: translateY(-8px);
+}
+.content .row .category .categoryIcon {
+  margin: 10px 0 30px 0;
+}
+.content .row .category .categoryIcon .icon {
+  font-size: 50px;
+  background-color: #a872e9;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 20px;
+  width: 50px;
+}
+.content .row .category .categoryText {
+  font-family: "Tajawal", sans-serif;
+}
+.content .row .category .categoryText h3 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: #a872e9;
+}
+.content .row .category .categoryText p {
+  color: #5b6477;
+  font-size: 16px;
+  font-weight: 800;
+}
+.content .famousCourses {
+  margin-top: 80px;
+  background-color: #fff;
+  text-align: right;
+  width: 80%;
+  margin: auto;
+}
+.content .famousCourses h2 {
+  font-family: "Tajawal", sans-serif;
+  margin-bottom: 20px;
+  font-size: 19px;
+}
+.content .famousCourses .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.content .famousCourses .row .famousCourseBox {
+  flex: 0 0 31.33%;
+  max-width: 31.33%;
+  margin-bottom: 4%;
+  margin-left: 2%;
+  width: 33.33%;
+  border: 1px solid rgba(91, 100, 119, 0.48);
+  border-radius: 15px;
+  transform: translateY(8px);
+  transition: all 0.3s ease-in-out;
+}
+.content .famousCourses .row .famousCourseBox:hover {
+  transform: translateY(-8px);
+  cursor: pointer;
+}
+.content .famousCourses .row .famousCourseBox .imageCourseBox {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.content .famousCourses .row .famousCourseBox .imageCourseBox img {
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+}
+.content .famousCourses .row .famousCourseBox .textCourseBox {
+  margin-right: 20px;
+  font-family: "Tajawal", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.content .famousCourses .row .famousCourseBox .textCourseBox p {
+  color: #252541;
+}
+.content .famousCourses .row .famousCourseBox .textCourseBox .textCourseBoxRow {
+  padding: 10px;
+}
+.content
+  .famousCourses
+  .row
+  .famousCourseBox
+  .textCourseBox
+  .textCourseBoxRow
+  .instructor {
+  display: inline-block;
+  text-align: right;
+}
+.content
+  .famousCourses
+  .row
+  .famousCourseBox
+  .textCourseBox
+  .textCourseBoxRow
+  .instructor
+  p {
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 8px;
+  padding-top: 2px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #8894a4;
+}
+.content .famousCourses .row .famousCourseBox .textCourseBox p:hover {
+  cursor: pointer;
+  color: #19b962;
+}
+.content
+  .famousCourses
+  .row
+  .famousCourseBox
+  .textCourseBox
+  .textCourseBoxRow
+  .instructor
+  img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.content
+  .famousCourses
+  .row
+  .famousCourseBox
+  .textCourseBox
+  .textCourseBoxRow
+  .time {
+  float: left;
+}
+.content
+  .famousCourses
+  .row
+  .famousCourseBox
+  .textCourseBox
+  .textCourseBoxRow
+  .time
+  p {
+  font-size: 15px;
+  color: #252541;
+  opacity: 0.7;
+  margin-right: 8px;
+  font-weight: 800;
+  display: inline-block;
+}
+.content
+  .famousCourses
+  .row
+  .famousCourseBox
+  .textCourseBox
+  .textCourseBoxRow
+  .time
+  svg.clock {
+  font-size: 14px;
+  color: #b7bec0;
+  vertical-align: middle;
+}
+@media only screen and (max-width: 767px) {
+  .content .famousCourses .row .famousCourseBox {
+    flex: 0 0 46%;
+    max-width: 46%;
+    margin-bottom: 4%;
+    margin-left: 4%;
+    border: 1px solid rgba(91, 100, 119, 0.48);
+    border-radius: 15px;
+    transform: translateY(8px);
+    transition: all 0.3s ease-in-out;
+  }
+  .swiper-container .swiper-wrapper .swiper-slide {
+    width: 60vh !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .content .famousCourses .row .famousCourseBox {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 10%;
+    border: 1px solid rgba(91, 100, 119, 0.48);
+    border-radius: 15px;
+    transform: translateY(8px);
+    transition: all 0.3s ease-in-out;
+  }
+  .content .famousCourses .row .famousCourseBox:last-child {
+    margin-bottom: 0;
+  }
+  .content .row .left {
+    max-width: 100%;
+  }
+}
+/* End style content component */
+
+/* Start style Footer component */
+.footer {
+  background-color: #252543;
+}
+.footer .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .row .iconsFooter {
+  padding-top: 6.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.footer .row .iconsFooter div {
+  background-color: #30304d;
+  margin-left: 8%;
+  border-radius: 50px;
+  padding: 10px 14px 10px 14px;
+}
+.footer .row .iconsFooter div svg {
+  color: #8894a4;
+  transition: all 0.3s ease-in-out;
+}
+.footer .row .iconsFooter div svg:hover,
+.footer .row .iconsFooter div:hover {
+  cursor: pointer;
+  color: #0056b3;
+}
+.footer .row .textFooter {
+  margin-bottom: 6.5%;
+  color: #828d9e;
+  font-family: "Tajawal", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+}
+/* End style Footer component */
+
+/* End Home Style */
+
+/* Start Single Style */
+
+/* Start style content component */
+.contentSingle {
+  background-color: #fff;
+  overflow: hidden;
+}
+.contentSingle section.coverCourse {
+  width: 100%;
+  height: 60vh;
+  background-color: #000;
+  position: relative;
+}
+.contentSingle section.coverCourse div.imageCover {
+  background-image: url("./images/Main/coverSinglePage.jpg");
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.55;
+}
+.contentSingle .course {
+  transform: translate(0%, -40vh);
+  width: 1140px;
+  height: 100%;
+  margin: auto;
+}
+.contentSingle .course .container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: auto;
+}
+.contentSingle .course .container .row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.contentSingle .course .container .row .right {
+  max-width: 75%;
+  /* flex: 0 0 20%; */
+}
+.contentSingle .course .container .row .right p {
+  font-family: "Tajawal", sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #fff;
+}
+.contentSingle .course .container .row .left {
+  max-width: 25%;
+  /* flex: 0 0 20%; */
+}
+.contentSingle .course .container .row .left p {
+  background-color: #252541;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 20px 15px 10px;
+  color: #fff;
+  font-family: "Tajawal", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+.contentSingle .course .container .row .left p span {
+  background-color: #f6da75 !important;
+  padding: 8px 26px;
+  border: none;
+  border-radius: 25px;
+  margin-right: 10px;
+  font-weight: 700;
+  color: #252541;
+  transition: all 0.3s ease-in-out;
+}
+.contentSingle .course .container .row .left p span:hover {
+  color: #464148;
+  opacity: 0.85;
+  box-shadow: 0px 1px 6px #d6be6d;
+}
+.contentSingle .course .container .row_Content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.contentSingle .course .container .row_Content .videoList {
+  font-family: "Tajawal", sans-serif;
+  background-color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 0px 10px 10px 0;
+  overflow: scroll;
+  max-height: 500px;
+  flex: 0 0 30%;
+  max-width: 30%;
+  direction: rtl;
+}
+.contentSingle .course .container .row_Content .videoList .videoListItem {
+  font-family: "Tajawal", sans-serif;
+  padding: 20px;
+  display: flex;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: none;
+  color: #252546;
+}
+.contentSingle .course .container .row_Content .videoList .videoListItem li {
+  font-size: 15px;
+}
+.selected {
+  background-color: #252546 !important;
+  border-radius: 10px !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+.contentSingle
+  .course
+  .container
+  .row_Content
+  .videoList
+  .videoListItem
+  .videoListItem___left {
+  width: 90%;
+  flex: 0 0 90%;
+}
+.contentSingle
+  .course
+  .container
+  .row_Content
+  .videoList
+  .videoListItem
+  .videoListItem___right {
+  width: 10%;
+  flex: 0 0 10%;
+  color: #a8a8b3;
+}
+.contentSingle .course .container .row_Content .video div.video-react {
+  width: 700px;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .contentSingle .course .container {
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    margin: auto;
+  }
+  .contentSingle .course .container .row .left {
+    max-width: 25%;
+    flex: 0 0 40%;
+  }
+  .contentSingle .course .container .row .right {
+    max-width: 75%;
+    flex-basis: 20%;
+  }
+}
+@media only screen and (max-width: 997px) {
+  .contentSingle .course .container {
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+    margin: auto;
+  }
+  .contentSingle .course .container .row {
+    width: 80%;
+  }
+  .contentSingle .course .container .row .left {
+    max-width: 25%;
+    flex: 0 0 100%;
+  }
+  .contentSingle .course .container .row .left p {
+    padding: 15px 20px 15px 10px;
+  }
+  .contentSingle .course .container .row .left p span {
+    padding: 8px 8px;
+    margin-right: 10px;
+  }
+  .contentSingle .course .container .row .right {
+    max-width: 75%;
+    flex-basis: 30%;
+  }
+  .contentSingle .course .container .row_Content {
+    flex-direction: column-reverse;
+  }
+  .contentSingle .course .container .row_Content .videoList {
+    max-width: 51%;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .contentSingle .course .container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: auto;
+  }
+  .contentSingle .course .container .row {
+    width: 50%;
+  }
+  .contentSingle .course .container .row_Content .video div.video-react {
+    width: 50%;
+    height: 75%;
+  }
+  .contentSingle .course .container .row .left {
+    max-width: 30%;
+    /* flex: 0 0 20%; */
+  }
+  .contentSingle .course .container .row_Content .videoList {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .contentSingle .course .container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: auto;
+  }
+  .contentSingle .course .container .row {
+    width: 45%;
+  }
+  .contentSingle .course .container .row .left {
+    max-width: 35%;
+    /* flex: 0 0 20%; */
+  }
+  .contentSingle .course .container .row .right {
+    max-width: 100%;
+    flex-basis: 36%;
+  }
+  .contentSingle .course .container .row_Content .video div.video-react {
+    width: 40%;
+    height: 75%;
+  }
+  .contentSingle .course .container .row_Content .video div.video-react {
+    width: 41.5%;
+    height: 75%;
+  }
+  .contentSingle .course .container .row_Content .videoList {
+    max-width: 41%;
+    margin-top: 10px;
+  }
+}
+
+/* End style content component */
+
+/* End Single Style */
